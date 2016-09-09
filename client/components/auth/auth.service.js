@@ -146,9 +146,9 @@ export function AuthService($location, $http, $cookies, $q, appConfig, Util, Use
     isLoggedIn(callback ? : Function) {
       return Auth.getCurrentUser(undefined)
         .then(user => {
-          var is = user.hasOwnProperty('role');
-          safeCb(callback)(is);
-          return is;
+          // var is = user.hasOwnProperty('role');
+          safeCb(callback)(true);
+          return true;
         });
     },
 
