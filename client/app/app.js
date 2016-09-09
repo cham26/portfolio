@@ -22,13 +22,15 @@ import admin from './admin';
 import navbar from '../components/navbar/navbar.component';
 import footer from '../components/footer/footer.component';
 import main from './main/main.component';
+import bio from '../components/bio-component/myBio.directive';
+import skills from '../components/skills-component/mySkills.directive';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 
 import './app.scss';
 
 angular.module('portfolioApp', [ngCookies, ngResource, ngSanitize, uiRouter, uiBootstrap, _Auth,
-    account, admin, navbar, footer, main, constants, util
+    account, admin, navbar, footer, main, bio, skills, constants, util
   ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {

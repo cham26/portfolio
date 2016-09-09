@@ -2,23 +2,19 @@
 
 import angular from 'angular';
 
-export default angular
-  .module('portfolioApp', [])
-  .component('myBio', function() {
+export class BioController {
+  constructor() {}
+
+};
+
+export default angular.module('directives.bio', [])
+  .directive('bio', function() {
     return {
       template: require('./myBio.html'),
       restrict: 'E',
-      // template: 'lorem120',
-      controller: function() {
-      }
+      controller: BioController,
+      controllerAs: '$ctrl',
+      scope: {}
     };
   })
   .name;
-
-
-// export default angular.module('directives.navbar', [])
-//   .component('navbar', {
-//     template: require('./navbar.html'),
-//     controller: NavbarComponent
-//   });
-//   .name;
