@@ -3,34 +3,20 @@ import uiRouter from 'angular-ui-router';
 import routing from './main.routes';
 
 export class MainController {
-  $http;
-
-  awesomeThings = [];
-  newThing = '';
+  set this(value) {
+    this.this = value;
+  }
 
   /*@ngInject*/
-  constructor($http) {
-    this.$http = $http;
-  }
-
-  $onInit() {
-    this.$http.get('/api/things')
-      .then(response => {
-        this.awesomeThings = response.data;
-      });
-  }
-
-  addThing() {
-    if(this.newThing) {
-      this.$http.post('/api/things', {
-        name: this.newThing
-      });
-      this.newThing = '';
-    }
-  }
-
-  deleteThing(thing) {
-    this.$http.delete('/api/things/' + thing._id);
+  constructor() {
+    this.skillsArray = [
+      {source: '/assets/images/skills/html.png', id: 'HTML', caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dicta fugit perspiciatis? Accusantium cum et id libero nemo quia, similique. Eligendi, expedita, nihil. Animi, aperiam, atque. Mollitia provident quo quod?'},
+      {source: '/assets/images/skills/css.png', id: 'CSS', caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dicta fugit perspiciatis? Accusantium cum et id libero nemo quia, similique. Eligendi, expedita, nihil. Animi, aperiam, atque. Mollitia provident quo quod?'},
+      {source: '/assets/images/skills/angular.png', id: 'ANGULAR', caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dicta fugit perspiciatis? Accusantium cum et id libero nemo quia, similique. Eligendi, expedita, nihil. Animi, aperiam, atque. Mollitia provident quo quod?'},
+      {source: '/assets/images/skills/git.png', id: 'GIT', caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dicta fugit perspiciatis? Accusantium cum et id libero nemo quia, similique. Eligendi, expedita, nihil. Animi, aperiam, atque. Mollitia provident quo quod?'},
+      {source: '/assets/images/skills/bootstrap.png', id: 'BOOTSTRAP', caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dicta fugit perspiciatis? Accusantium cum et id libero nemo quia, similique. Eligendi, expedita, nihil. Animi, aperiam, atque. Mollitia provident quo quod?'},
+      {source: '/assets/images/skills/heroku.png', id: 'HEROKU', caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dicta fugit perspiciatis? Accusantium cum et id libero nemo quia, similique. Eligendi, expedita, nihil. Animi, aperiam, atque. Mollitia provident quo quod?'}
+    ]
   }
 }
 
@@ -41,3 +27,5 @@ export default angular.module('portfolioApp.main', [uiRouter])
     controller: MainController
   })
   .name;
+
+// ToDo: write arrays into constants

@@ -1,8 +1,13 @@
-.container {
-  padding-top: 40px;
+
+.profPic {
+  width: 250px;
+  height: 250px;
+  display: block;
+  margin: 0px auto;
 };
 .profDescription {
-  height: 10em;
+  height: 18em;
+  width: 80em;
   display: table-cell;
   vertical-align: middle;
 };
@@ -13,7 +18,16 @@
 h3 {
   text-align: center;
 };
-.skillIcon {
+p {
+  text-align: center;
+};
+.setSkills {
+  display: block;
+  margin: 20px auto;
+};
+.logoIcon {
+  width: 100px;
+  height: 100px;
   display: block;
   margin: 0px auto;
 }

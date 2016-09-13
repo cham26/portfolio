@@ -1,12 +1,13 @@
 <h2 class="skillLabel">My Specialties Are</h2>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-lg-4">
-      <img src="\assets\images\skills\html.png" alt="" class="skillIcon" class="img-circle img-responsive">
-      <h3>HTML</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi assumenda delectus dignissimos, dolor doloremque dolores doloribus eveniet facere iste iusto maiores neque numquam quibusdam repellat saepe sapiente tenetur voluptatum?</p>
+    <div class="col-lg-4" ng-repeat="skill in $ctrl.skillsIcon" >
+      <img class="setSkills" ng-src="{{skill.source}}">
+      <h3>{{skill.id}}</h3>
+      <p>{{skill.caption}}</p>
     </div>
   </div>
 </div>
+
 
 <!--ToDo: change to ng-repeat, get text and image sources from directive controller,-->

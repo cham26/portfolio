@@ -4,23 +4,19 @@
 import angular from 'angular';
 
 export class NavbarComponent {
-  menu = [{
-    'title': 'Home',
-    'state': 'main'
-  }];
-  isLoggedIn: Function;
-  isAdmin: Function;
-  getCurrentUser: Function;
-  isCollapsed = true;
-
-  constructor(Auth) {
-    'ngInject';
-
-    this.isLoggedIn = Auth.isLoggedInSync;
-    this.isAdmin = Auth.isAdminSync;
-    this.getCurrentUser = Auth.getCurrentUserSync;
+  set this(value) {
+    this.this = value;
   }
 
+  constructor() {
+    this.optionsVisible = false;
+    this.options = function() {
+      this.optionsVisible = this.optionsVisible ? false : true;
+    }
+  }
+  // options(){
+  //   this.optionsVisible = this.optionsVisible ? false : true;
+  // };
 }
 
 export default angular.module('directives.navbar', [])
