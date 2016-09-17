@@ -9,14 +9,11 @@ export class NavbarComponent {
   }
 
   constructor() {
-    this.optionsVisible = false;
-    this.options = function() {
-      this.optionsVisible = this.optionsVisible ? false : true;
-    }
   }
-  // options(){
-  //   this.optionsVisible = this.optionsVisible ? false : true;
-  // };
+  optionsVisible = false;
+  options(){
+    this.optionsVisible = this.optionsVisible ? false : true;
+  };
 }
 
 export default angular.module('directives.navbar', [])

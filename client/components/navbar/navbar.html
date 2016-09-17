@@ -1,6 +1,29 @@
 <nav class="navbar">
-  <span class="icon">
-    <img class="logoIcon" src="/assets/images/logoIcon.png" ng-click="options()">
-  </span>
-  <span ng-show="optionsVisible">Work</span>
+  <div class="container-fluid">
+    <div class="row">
+      <div class=" menu col-lg-2">
+        <a href="#" ng-show="$ctrl.optionsVisible">Projects
+          <span class="line css3Animate"></span>
+        </a>
+      </div>
+      <div class=" menu col-lg-2">
+        <a href="#" ng-show="$ctrl.optionsVisible">Skills
+          <span class="line css3Animate"></span>
+        </a>
+      </div>
+      <div class="col-lg-4" >
+        <img class="logoIcon" src="/assets/images/logoIcon.png" ng-click="$ctrl.options()">
+      </div>
+      <div class="menu col-lg-2">
+        <a href="#" ng-show="$ctrl.optionsVisible">About Me
+          <span class="line css3Animate"></span>
+        </a>
+      </div>
+      <div class="menu col-lg-2">
+        <a href="#" ng-show="$ctrl.optionsVisible">Contact
+          <span class="line css3Animate"></span>
+        </a>
+      </div>
+    </div>
+  </div>
 </nav>
