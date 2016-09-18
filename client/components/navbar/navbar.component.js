@@ -9,10 +9,11 @@ export class NavbarComponent {
   }
 
   constructor() {
+    this.optionsVisible = false;
   }
-  optionsVisible = false;
+
   options(){
-    this.optionsVisible = this.optionsVisible ? false : true;
+    this.optionsVisible = !this.optionsVisible;
   };
 }
 
