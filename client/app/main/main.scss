@@ -27,13 +27,23 @@
   display: block;
   margin: 0px auto;
 };
-.menu {
+.animatedNavbarLinks {
   text-align: center;
   margin-top: 30px;
-  font-size: 1.2em;
+  font-size: 16px;
   letter-spacing: 6px;
   font-weight: bold;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
+  animation: fadeIn 3s ease-in;
+  transform-origin: center bottom;
+};
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 };
 
 .navbar a {
