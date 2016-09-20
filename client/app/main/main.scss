@@ -1,15 +1,39 @@
 
-.profPic {
+.animatedProfPic {
   width: 250px;
   height: 250px;
   display: block;
   margin: 0px auto;
+  animation: slideInRight 1s ease-in;
+  transform-origin: left;
 };
-.profDescription {
+@keyframes slideInRight{
+  0%{
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 0;
+  }
+  100%{
+    transform: translate3d(100px, 0px, 0px);
+    opacity: 1;
+  }
+};
+.animatedProfDescription {
   height: 18em;
   width: 80em;
   display: table-cell;
   vertical-align: middle;
+  animation: slideOutLeft 1s ease-in;
+  transform-origin: right;
+};
+@keyframes slideOutLeft{
+  0%{
+    transform: translate3d(200px, 0px, 0px);
+    opacity: 0;
+  }
+  100%{
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1;
+  }
 };
 .skillLabel {
   text-align: center;
