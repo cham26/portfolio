@@ -1,11 +1,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg-4">
-      <img src="\assets\images\bio\profPic.jpg" class="img-circle animatedProfPic" name="profPicSlide">
+      <img ng-src="{{$ctrl.allProfileImages[$ctrl.index].source}}" class="img-circle animatedProfPic"/>
       <span>
         <ul class="pager">
-          <li><a href="#" onclick="return $ctrl.changeImage(-1)">&#8592</a></li>
-           <li><a href="#" onclick="return $ctrl.changeImage(1)">&#8594</a></li>
+          <li><a href="#" ng-click="$ctrl.changeImage('prev')">&#8592</a></li>
+           <li><a href="#" ng-click="$ctrl.changeImage('next')">&#8594</a></li>
         </ul>
       </span>
     </div>

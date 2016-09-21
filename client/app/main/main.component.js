@@ -17,22 +17,21 @@ export class MainController {
       {source: '/assets/images/skills/bootstrap.png', id: 'BOOTSTRAP', caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dicta fugit perspiciatis? Accusantium cum et id libero nemo quia, similique. Eligendi, expedita, nihil. Animi, aperiam, atque. Mollitia provident quo quod?'},
       {source: '/assets/images/skills/heroku.png', id: 'HEROKU', caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dicta fugit perspiciatis? Accusantium cum et id libero nemo quia, similique. Eligendi, expedita, nihil. Animi, aperiam, atque. Mollitia provident quo quod?'}
     ];
-
-    this.profPicImage = ["\assets\images\bio\profPic.jpg", "\assets\images\bio\nerd.jpg", "\assets\images\bio\sideview.jpg"];
-    this.profPicNumber = 0;
-    this.profPicLength = this.profPicImage.profPicLength - 1;
   }
 
-  changeImage(num){
-    this.profPicNumber = this.profPicNumber + num;
-    if (this.profPicNumber > this.profPicLength){
-      this.profPicNumber = 0;
+  changeImage(direction){
+    if (direction === 'next' && this.index < this.allProfileImages.length -1){
+      this.index++;
     }
-    if (this.profPicNumber < 0){
-      this.profPicNumber = this.profPicLength;
+    else if (direction === 'next' && this.allProfileImages.length){
+      this.index = 0;
     }
-    document.profPicSlide.src= this.profPicImage[this.profPicNumber];
-    return false;
+    else if (direction === 'prev' && this.index !== 0){
+      this.index--;
+    }
+    else if (direction === 'prev' && this.index === 0) {
+      this.index = this.allProfileImages.length;
+    }
   }
 
 }
