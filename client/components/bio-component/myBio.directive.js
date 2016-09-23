@@ -6,26 +6,28 @@ export class BioController {
   set this(value) {
     this.this = value;
   }
-
-  constructor() {
-    this.allProfileImages = [
-      {
-        id: 1,
-        source: "/assets/images/bio/profPic.jpg"
-      },
-      {
-        id: 2,
-        source: "/assets/images/bio/nerd.jpg"
-      },
-      {
-        id: 3,
-        source: "/assets/images/bio/sideview.jpg"
-      }
-    ];
+  /*@ngInject*/
+  constructor(appConfig) {
+    this.allProfileImages = appConfig.PROFILE_IMAGES;
     this.index = 0;
   }
 
-};
+  changeImage(direction){
+    if (direction === 'next' && this.index < this.allProfileImages.length -1){
+      this.index++;
+    }
+    else if (direction === 'next' && this.allProfileImages.length){
+      this.index = 0;
+    }
+    else if (direction === 'prev' && this.index !== 0){
+      this.index--;
+    }
+    else if (direction === 'prev' && this.index === 0) {
+      this.index = this.allProfileImages.length;
+    }
+  }
+
+}
 
 export default angular.module('directives.bio', [])
   .directive('bio', function() {
@@ -35,7 +37,6 @@ export default angular.module('directives.bio', [])
       controller: BioController,
       controllerAs: '$ctrl',
       scope: {
-        onImageChange: '&'
       }
     };
   })

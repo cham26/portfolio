@@ -18,22 +18,6 @@ export class MainController {
       {source: '/assets/images/skills/heroku.png', id: 'HEROKU', caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dicta fugit perspiciatis? Accusantium cum et id libero nemo quia, similique. Eligendi, expedita, nihil. Animi, aperiam, atque. Mollitia provident quo quod?'}
     ];
   }
-
-  changeImage(direction){
-    if (direction === 'next' && this.index < this.allProfileImages.length -1){
-      this.index++;
-    }
-    else if (direction === 'next' && this.allProfileImages.length){
-      this.index = 0;
-    }
-    else if (direction === 'prev' && this.index !== 0){
-      this.index--;
-    }
-    else if (direction === 'prev' && this.index === 0) {
-      this.index = this.allProfileImages.length;
-    }
-  }
-
 }
 
 export default angular.module('portfolioApp.main', [uiRouter])
@@ -44,4 +28,4 @@ export default angular.module('portfolioApp.main', [uiRouter])
   })
   .name;
 
-// ToDo: write arrays into constants
+
