@@ -9,21 +9,22 @@ export class BioController {
   /*@ngInject*/
   constructor(appConfig) {
     this.allProfileImages = appConfig.PROFILE_IMAGES;
+    this.allProfileDescriptions = appConfig.PROFILE_DESCRIPTION;
     this.index = 0;
   }
 
   changeImage(direction){
-    if (direction === 'next' && this.index < this.allProfileImages.length -1){
+    if (direction === 'next' && this.index < this.allProfileImages.length -1 && this.index < this.allProfileDescriptions.length -1){
       this.index++;
     }
-    else if (direction === 'next' && this.allProfileImages.length){
+    else if (direction === 'next' && this.allProfileImages.length && this.allProfileDescriptions.length){
       this.index = 0;
     }
     else if (direction === 'prev' && this.index !== 0){
       this.index--;
     }
     else if (direction === 'prev' && this.index === 0) {
-      this.index = this.allProfileImages.length;
+      this.index = this.allProfileImages.length && this.allProfileDescriptions.length;
     }
   }
 
@@ -42,4 +43,4 @@ export default angular.module('directives.bio', [])
   })
   .name;
 
-// ToDo: Read about isolated scope function binding., move this.allProfileImages to constants.,
+
