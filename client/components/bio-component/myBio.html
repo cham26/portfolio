@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg-4">
-      <img ng-src="{{$ctrl.allProfileImages[$ctrl.index].source}}" class="img-circle animatedProfPic"/>
+      <img ng-src="{{$ctrl.allProfileInformation[$ctrl.index].source}}" class="img-circle animatedProfPic"/>
       <span>
         <ul class="pager">
           <li><a href="#" ng-click="$ctrl.changeImage('prev')">&#8592</a></li>
@@ -11,7 +11,7 @@
     </div>
     <div class="animatedProfDescription"  class="col-lg-6">
       <p class="text-center">
-        {{$ctrl.allProfileDescriptions[$ctrl.index].caption}}
+        {{$ctrl.allProfileInformation[$ctrl.index].caption}}
       </p>
     </div>
   </div>

@@ -5,9 +5,6 @@ export default function routes($stateProvider) {
 
   $stateProvider.state('projects', {
     url: '/projects',
-    template: require('./projects/projects.html'),
-    controller: 'ProjectsController',
-    controllerAs: 'projects',
-    authenticate: 'projects'
+    template: require('./projects.html')
   });
 }

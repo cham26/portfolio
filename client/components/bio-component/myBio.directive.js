@@ -8,23 +8,22 @@ export class BioController {
   }
   /*@ngInject*/
   constructor(appConfig) {
-    this.allProfileImages = appConfig.PROFILE_IMAGES;
-    this.allProfileDescriptions = appConfig.PROFILE_DESCRIPTION;
+    this.allProfileInformation = appConfig.PROFILE_INFORMATION;
     this.index = 0;
   }
 
   changeImage(direction){
-    if (direction === 'next' && this.index < this.allProfileImages.length -1 && this.index < this.allProfileDescriptions.length -1){
+    if (direction === 'next' && this.index < this.allProfileInformation.length -1){
       this.index++;
     }
-    else if (direction === 'next' && this.allProfileImages.length && this.allProfileDescriptions.length){
+    else if (direction === 'next' && this.allProfileInformation.length){
       this.index = 0;
     }
     else if (direction === 'prev' && this.index !== 0){
       this.index--;
     }
     else if (direction === 'prev' && this.index === 0) {
-      this.index = this.allProfileImages.length && this.allProfileDescriptions.length;
+      this.index = this.allProfileInformation.length -1;
     }
   }
 

@@ -19,10 +19,12 @@ import {
 import _Auth from '../components/auth/auth.module';
 import account from './account';
 import admin from './admin';
-import projects from './projects/projects.module';
 import navbar from '../components/navbar/navbar.component';
 import main from './main/main.component';
 import bio from '../components/bio-component/myBio.directive';
+import projects from './projects/projects.component';
+import skill from './skill/skill.component';
+import contact from './contact/contact.component';
 import skills from '../components/skills-component/mySkills.directive';
 import constants from './app.constants';
 import util from '../components/util/util.module';
@@ -30,7 +32,7 @@ import util from '../components/util/util.module';
 import './app.scss';
 
 angular.module('portfolioApp', [ngCookies, ngResource, ngSanitize, uiRouter, uiBootstrap, _Auth,
-    account, admin, navbar, main, projects, bio, skills, constants, util
+    account, admin, navbar, main, projects, skill, contact, bio, skills, constants, util
   ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
