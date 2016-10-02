@@ -5,6 +5,6 @@ export default function routes($stateProvider) {
 
   $stateProvider.state('projects', {
     url: '/projects',
-    template: require('./projects.html')
+    template: '<projects></projects>'
   });
 }

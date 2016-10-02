@@ -5,6 +5,6 @@ export default function routes($stateProvider) {
 
   $stateProvider.state('skill', {
     url: '/skill',
-    template: require('./skill.html')
+    template: '<skill></skill>'
   });
 }
