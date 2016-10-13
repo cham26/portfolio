@@ -26,14 +26,14 @@ import projects from './projects/projects.component';
 import skill from './skill/skill.component';
 import contact from './contact/contact.component';
 import skills from '../components/skills-component/mySkills.directive';
-import photogallery from '../components/photo-gallery/photoGallery.component';
+import jkuriGallery from '../components/photo-gallery/photoGallery.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 
 import './app.scss';
 
 angular.module('portfolioApp', [ngCookies, ngResource, ngSanitize, uiRouter, uiBootstrap, _Auth,
-    account, admin, navbar, main, projects, skill, contact, bio, skills, photogallery, constants, util
+    account, admin, navbar, main, projects, skill, contact, bio, skills, jkuriGallery, constants, util
   ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {

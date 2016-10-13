@@ -23,6 +23,3 @@ export default angular.module('directives.skills', [])
   .name;
 
 
-// ToDo: add controller using constructor pattern for example see controller on main.js,
-//       pass through isolated scope data from portfolio controller, scope includes: array with images (use for skills)
-//           and text

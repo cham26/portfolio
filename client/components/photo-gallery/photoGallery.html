@@ -1,6 +1,11 @@
 <div class="{{ baseClass }}">
-  <div ng-repeat="i in images">
-    <img ng-src="{{ i.thumb }}" class="{{ thumbClass }}" ng-click="openGallery($index)" alt="Image {{ $index + 1 }}"/>
+  <div class="row">
+    <div class="col-lg-3 col-xs-12 col-sm-6" ng-repeat="i in images">
+      <div class="photoWrapper">
+        <img ng-src="{{ i.thumb }}" class="{{ thumbClass }}" ng-click="openGallery($index)" alt="Image {{ $index + 1 }}"/>
+        <p class="text-center">{{i.dxp}}</p>
+      </div>
+    </div>
   </div>
 </div>
 <div class="ng-overlay" ng-show="opened">
@@ -16,15 +21,15 @@
   <a class="nav-left" ng-click="prevImage()"><i class="fa fa-angle-left"></i></a>
   <img ondragstart="return false;" draggable="false" ng-src="{{ img }}" ng-click="nextImage()" ng-show="!loading"
        class="effect"/>
+  <span>{{caption}}</span>
   <a class="nav-right" ng-click="nextImage()"><i class="fa fa-angle-right"></i></a>
-  <span class="info-text">{{ index + 1 }}/{{ images.length }} - {{ description }}</span>
+  <span class="info-text">{{ index + 1 }}/{{ images.length }} - {{ images[index].caption }}</span>
   <div class="ng-thumbnails-wrapper">
     <div class="ng-thumbnails slide-left">
       <div ng-repeat="i in images">
-        <img ng-src="{{ i.thumb }}" ng-class="{\'active\': index === $index}" ng-click="changeImage($index)"/>
+        <img ng-src="{{ i.thumb }}" ng-class="{'/active/': index === $index}" ng-click="changeImage($index)"/>
       </div>
     </div>
   </div>
 </div>
 
-<h1>HELLO</h1>
