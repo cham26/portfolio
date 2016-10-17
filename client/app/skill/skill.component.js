@@ -10,78 +10,129 @@ export class SkillController {
   constructor() {
     this.images = [
       {
-        thumb: '/assets/images/photogallery/photo1.jpg',
-        dxp: 'ray of sunshine',
-        img: '/assets/images/photogallery/photo1.jpg',
-        caption: 'hello world happy day'
+        fieldLabel: "first group",
+        photos: [
+          {
+            img: "/assets/images/photogallery/photo1.jpg",
+            thumb: "/assets/images/photogallery/photo1.jpg",
+            dxp: "ray of sunshine",
+            caption: "hello world happy day"
+          }
+        ]
       },
       {
-        thumb: '/assets/images/photogallery/photo2.jpg',
-        dxp: 'world peace',
-        img: '/assets/images/photogallery/photo2.jpg',
-        caption: 'sunshine'
+        fieldLabel: "Photo",
+        photos: [
+          {
+            img: "/assets/images/photogallery/photo2.jpg",
+            thumb: "/assets/images/photogallery/photo2.jpg",
+            dxp: "world peace",
+            caption: "sunshine"
+          }
+        ]
       },
       {
-        thumb: '/assets/images/photogallery/photo3.jpg',
-        dxp: 'happy day',
-        img: '/assets/images/photogallery/photo3.jpg',
-        caption: 'sea'
+        fieldLabel: "Photo List1",
+        photos: [
+          {
+            img: "/assets/images/photogallery/photo3.jpg",
+            thumb: '/assets/images/photogallery/photo3.jpg',
+            dxp: 'happy day',
+            caption: 'sea'
+          },
+          {
+            img: "/assets/images/photogallery/photo4.jpg",
+            thumb: '/assets/images/photogallery/photo4.jpg',
+            dxp: 'choose happiness',
+            caption: 'sand'
+          },
+          {
+            img: "/assets/images/photogallery/photo5.jpg",
+            thumb: '/assets/images/photogallery/photo5.jpg',
+            dxp: 'be happy',
+            caption: 'beach'
+          },
+          {
+            img: "/assets/images/photogallery/photo1.jpg",
+            thumb: '/assets/images/photogallery/photo1.jpg',
+            dxp: 'happy tummy',
+            caption: 'sandcastle'
+          },
+          {
+            img: "/assets/images/photogallery/photo2.jpg",
+            thumb: '/assets/images/photogallery/photo2.jpg',
+            dxp: 'spread happiness',
+            caption: 'swimming'
+          }
+        ]
       },
       {
-        thumb: '/assets/images/photogallery/photo4.jpg',
-        dxp: 'choose happiness',
-        img: '/assets/images/photogallery/photo4.jpg',
-        caption: 'sand'
+        fieldLabel: "Photo List1",
+        photos: [
+          {
+            img: "/assets/images/photogallery/photo5.jpg",
+            thumb: '/assets/images/photogallery/photo5.jpg',
+            dxp: 'be grateful',
+            caption: 'chocolates'
+          },
+          {
+            img: "/assets/images/photogallery/photo4.jpg",
+            thumb: '/assets/images/photogallery/photo4.jpg',
+            dxp: 'appreciate small things',
+            caption: 'candy'
+          },
+          {
+            img: "/assets/images/photogallery/photo2.jpg",
+            thumb: '/assets/images/photogallery/photo2.jpg',
+            dxp: 'be thankful',
+            caption: 'cotton candy'
+          },
+          {
+            img: "/assets/images/photogallery/photo1.jpg",
+            thumb: '/assets/images/photogallery/photo1.jpg',
+            dxp: 'be content',
+            caption: 'bubblegum'
+          },
+          {
+            img: "/assets/images/photogallery/photo3.jpg",
+            thumb: '/assets/images/photogallery/photo3.jpg',
+            dxp: 'be blissful',
+            caption: 'ice cream'
+          }
+        ]
       },
       {
-        thumb: '/assets/images/photogallery/photo5.jpg',
-        dxp: 'celebrate life',
-        img: '/assets/images/photogallery/photo5.jpg',
-        caption: 'beach'
-      },
-      {
-        thumb: '/assets/images/photogallery/photo1.jpg',
-        dxp: 'love all time',
-        img: '/assets/images/photogallery/photo1.jpg',
-        caption: 'hello world happy day'
-      },
-      {
-        thumb: '/assets/images/photogallery/photo2.jpg',
-        dxp: 'be grateful',
-        img: '/assets/images/photogallery/photo2.jpg',
-        caption: 'sunshine'
-      },
-      {
-        thumb: '/assets/images/photogallery/photo3.jpg',
-        dxp: 'always smile',
-        img: '/assets/images/photogallery/photo3.jpg',
-        caption: 'sea'
-      },
-      {
-        thumb: '/assets/images/photogallery/photo4.jpg',
-        dxp: 'keep the spirit up',
-        img: '/assets/images/photogallery/photo4.jpg',
-        caption: 'sand'
-      },
-      {
-        thumb: '/assets/images/photogallery/photo5.jpg',
-        dxp: 'never give up',
-        img: '/assets/images/photogallery/photo5.jpg',
-        caption: 'beach'
-      },
-      {
-        thumb: '/assets/images/photogallery/photo2.jpg',
-        dxp: 'live life to the fullest',
-        img: '/assets/images/photogallery/photo2.jpg',
-        caption: 'sunshine'
-      },
-      {
-        thumb: '/assets/images/photogallery/photo3.jpg',
-        dxp: 'cheers to new beginnings',
-        img: '/assets/images/photogallery/photo3.jpg',
-        caption: 'sea'
+        fieldLabel: "Photo List2",
+        photos: [
+          {
+            img: "/assets/images/photogallery/photo2.jpg",
+            thumb: '/assets/images/photogallery/photo2.jpg',
+            dxp: 'do not give up',
+            caption: 'wind'
+          },
+          {
+            img: "/assets/images/photogallery/photo4.jpg",
+            thumb: '/assets/images/photogallery/photo4.jpg',
+            dxp: 'keep your spirit up',
+            caption: 'breeze'
+          },
+          {
+            img: "/assets/images/photogallery/photo5.jpg",
+            thumb: '/assets/images/photogallery/photo5.jpg',
+            dxp: 'keep on fighting',
+            caption: 'fresh air'
+          }
+        ]
       }
     ];
+    this.newImages = this.images.map(function(x) {
+      return x.photos;
+    });
+    console.log(this.newImages);
+
+   this.imageCollection = _.flatten(this.newImages);
+    console.log(this.imageCollection)
+
   }
 }
 
