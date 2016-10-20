@@ -1,2 +1,11 @@
-
-<ng-gallery images="$ctrl.imageCollection"></ng-gallery>
+<button type="button" class="btn btn-primary" ng-click="$ctrl.toggleGroupPictures()">Sorted View</button>
+<div ng-show="!$ctrl.showGroupedPictures">
+  <ng-gallery images="$ctrl.newImages"></ng-gallery>
+</div>
+<div class="groupedPhotoContainer" ng-repeat="photoGroup in $ctrl.images" ng-show="$ctrl.showGroupedPictures">
+  <div class="row">
+    <div class="col-lg-12">
+      <ng-gallery images="photoGroup.photos"></ng-gallery>
+    </div>
+  </div>
+</div>

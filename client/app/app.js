@@ -28,12 +28,13 @@ import contact from './contact/contact.component';
 import skills from '../components/skills-component/mySkills.directive';
 import jkuriGallery from '../components/photo-gallery/photoGallery.component';
 import constants from './app.constants';
+import calculator from '../components/calculator/calculator.directive';
 import util from '../components/util/util.module';
 
 import './app.scss';
 
 angular.module('portfolioApp', [ngCookies, ngResource, ngSanitize, uiRouter, uiBootstrap, _Auth,
-    account, admin, navbar, main, projects, skill, contact, bio, skills, jkuriGallery, constants, util
+    account, admin, navbar, main, projects, skill, contact, bio, skills, jkuriGallery, constants, calculator, util
   ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {

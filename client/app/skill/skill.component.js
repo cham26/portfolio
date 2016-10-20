@@ -125,14 +125,11 @@ export class SkillController {
         ]
       }
     ];
-    this.newImages = this.images.map(function(x) {
-      return x.photos;
-    });
-    console.log(this.newImages);
-
-   this.imageCollection = _.flatten(this.newImages);
-    console.log(this.imageCollection)
-
+    this.newImages = _.flatten(_.map(this.images,'photos'));
+    this.showGroupedPictures = true;
+  }
+  toggleGroupPictures() {
+    return this.showGroupedPictures = !this.showGroupedPictures;
   }
 }
 
