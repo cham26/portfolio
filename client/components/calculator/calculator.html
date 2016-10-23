@@ -2,47 +2,37 @@
   <h4>CASIO</h4>
   <div class="inputSpace">
     <p class="output">
+      <input type="text"
+             class="outputValue"
+             ng-model="$ctrl.inputNumber">
     </p>
   </div>
   <div class="calButtons">
-        <button class="numberButton" ng-click="">1</button>
-        <button class="numberButton" ng-click="">2</button>
-        <button class="numberButton" ng-click="">3</button>
-        <button class="operationButton" ng-click="">+</button>
-        <button class="numberButton" ng-click="">4</button>
-        <button class="numberButton" ng-click="">5</button>
-        <button class="numberButton" ng-click="">6</button>
-        <button class="operationButton" ng-click="">-</button>
-        <button class="numberButton" ng-click="">7</button>
-        <button class="numberButton" ng-click="">8</button>
-        <button class="numberButton" ng-click="">9</button>
-        <button class="operationButton" ng-click="">*</button>
-        <button class="numberButton" ng-click="">0</button>
-        <button class="numberButton" ng-click="">.</button>
-        <button class="equalButton" ng-click="">=</button>
-        <button class="operationButton" ng-click="">/</button>
+    <p class="operators">
+      <button class="operationButton"
+              ng-click="$ctrl.selectedOperation('+', $ctrl.inputNumber)">+</button>
+      <button class="operationButton"
+              ng-click="$ctrl.selectedOperation('-', $ctrl.inputNumber)">-</button>
+      <button class="operationButton"
+              ng-click="$ctrl.selectedOperation('*', $ctrl.inputNumber)">*</button>
+      <button class="operationButton"
+              ng-click="$ctrl.selectedOperation('/', $ctrl.inputNumber)">/</button>
+    </p>
+    <p class="calNumbers">
+      <button class="numberButton"
+              ng-click="$ctrl.getUserInput($index+1)"
+              ng-repeat="number in [1,2,3,4,5,6,7,8,9]">
+        {{number}}
+      </button>
+      <button class="miscButton"
+              ng-click="$ctrl.getUserInput(0)">0</button>
+      <button class="miscButton"
+              ng-click="$ctrl.getUserInput('.')">.</button>
+      <button class="equalButton"
+              ng-click="$ctrl.computeResult()">=</button>
+    </p>
+    <button class="clearButton"
+            ng-click="$ctrl.resetOutput()">Clear</button>
 
-        <button class="clearButton" ng-click="">Clear</button>
   </div>
 </div>
-<!--<button class="numberButton" ng-click="">1</button>-->
-<!--<button class="numberButton" ng-click="">2</button>-->
-<!--<button class="numberButton" ng-click="">3</button>-->
-<!--<button class="operationButton" ng-click="">+</button>-->
-<!--<br>-->
-<!--<button class="numberButton" ng-click="">4</button>-->
-<!--<button class="numberButton" ng-click="">5</button>-->
-<!--<button class="numberButton" ng-click="">6</button>-->
-<!--<button class="operationButton" ng-click="">-</button>-->
-<!--<br>-->
-<!--<button class="numberButton" ng-click="">7</button>-->
-<!--<button class="numberButton" ng-click="">8</button>-->
-<!--<button class="numberButton" ng-click="">9</button>-->
-<!--<button class="operationButton" ng-click="">*</button>-->
-<!--<br>-->
-<!--<button class="numberButton" ng-click="">0</button>-->
-<!--<button class="numberButton" ng-click="">.</button>-->
-<!--<button class="equalButton" ng-click="">=</button>-->
-<!--<button class="operationButton" ng-click="">/</button>-->
-<!--<br>-->
-<!--<button class="clearButton" ng-click="">Clear</button>-->

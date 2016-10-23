@@ -10,6 +10,7 @@ export class ProjectsController {
   constructor() {
 
   }
+
 }
 
 export default angular.module('portfolioApp.projects', [uiRouter])
